@@ -11,20 +11,15 @@ html, body {
 }
 
 body {
-    background-color:rgb(238, 239, 250);
+    background-color:rgb(210, 228, 247);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
 }
 
-/*
-@keyframes move {
-    
-}*/
-
 header {
-    background-color: slategrey;
+    background-color: rgb(54, 97, 139);
     background-image: url(Images/rodolfo-quirós.jpg);
     background-size: cover;
     width: 100%;
@@ -32,6 +27,19 @@ header {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem 2rem;
+}
+
+nav > img {
+    width: 5rem;
+    height: auto;
+    box-shadow: none;
 }
 
 .navigation {
@@ -62,9 +70,8 @@ h1 {
     margin: 0;
     font-size: 5rem;
     color: white;
-    background-color: rgba(112, 128, 144, 0.5);
-    box-shadow: 5px 5px 10px rgb(112, 128, 144, 0.5), -5px -5px 10px rgb(112, 128, 144, 0.5);
-    /*border: 2px dashed yellow;*/
+    background-color: rgba(59, 124, 189, 0.5);
+    box-shadow: 5px 5px 10px rgba(59, 124, 189, 0.5), -5px -5px 10px rgba(59, 124, 189, 0.5);
 }
 
 h2 {
@@ -74,7 +81,7 @@ h2 {
     font-size: 1.2rem;
     border-top: 0.5rem solid black;
     color: white;
-    background-image: radial-gradient(rgb(41, 48, 88, 0.75), rgb(112, 128, 144, 0.75));
+    background-image: radial-gradient(rgb(2, 41, 80), rgba(54, 97, 139, 0.75));
     /*border: 2px dashed orange;*/
     
 }
@@ -108,17 +115,17 @@ main {
 }
 
 blockquote {
-    background-color: rgb(41, 48, 88);
+    background-color: rgb(2, 41, 80);
     color: white;
     font-style: italic;
     font-size: 3rem;
     text-align: center;
     padding: 1rem;
-    box-shadow: -50px -30px slategrey, -100px -50px rgb(41, 48, 88);
+    box-shadow: -50px -30px rgb(59, 124, 189), -100px -50px rgb(138, 193, 248);
 }
 
 section {
-    background-color: rgb(192, 197, 226);
+    background-color: rgb(138, 193, 248);
     padding: 2rem;
     border-radius: 5px;
     margin: 2rem 0;
@@ -129,12 +136,12 @@ section {
 h3 {
     font-size: 2rem;
     text-align: center;
-    background-image: radial-gradient(rgb(41, 48, 88), rgb(112, 128, 144));
+    background-image: radial-gradient(rgb(2, 41, 80), rgba(54, 97, 139, 0.75));
     color:white;
     width: 20%;
     padding: 0 1rem;
     border-radius: 5px;
-    box-shadow: 7px 7px rgb(41, 48, 88);
+    box-shadow: 7px 7px rgb(2, 41, 80);
 }
 
 p, .content, .lists {
@@ -154,16 +161,16 @@ p, .content, .lists {
 }
 
 .list1 {
-    background-color: rgb(79, 89, 141);
+    background-color: rgb(2, 41, 80);
     color: white;
 }
 
 .list2 {
-    background-color: rgb(134, 142, 185);
+    background-color: rgb(59, 124, 189);
 }
 
 .banner {
-    background-color: rgb(41, 48, 88);
+    background-color: rgb(2, 41, 80);
     color: white;
     align-self: center;
     padding: 0.3rem;
@@ -172,7 +179,7 @@ p, .content, .lists {
     font-size: 1.5rem;
     width: -moz-fit-content;
     width: fit-content;
-    box-shadow: inset 10px 10px 10px 5px rgb(192, 197, 226), inset -10px -10px 10px 5px rgb(192, 197, 226);
+    box-shadow: inset 10px 10px 10px 5px rgb(138, 193, 248), inset -10px -10px 10px 5px rgb(138, 193, 248);
 }
 
 .pics {
@@ -195,5 +202,5 @@ footer {
     width: 100%;
     text-align: center;
     padding: 2rem;
-    background-image: radial-gradient(rgb(41, 48, 88), slategrey);
+    background-image: radial-gradient(rgb(2, 41, 80), rgba(54, 97, 139, 0.75));
 }
