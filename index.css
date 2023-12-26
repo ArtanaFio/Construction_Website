@@ -11,7 +11,7 @@ html, body {
 }
 
 body {
-    background-color:aliceblue;
+    background-color:rgb(238, 239, 250);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,21 +31,35 @@ header {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    gap: 2rem;
+}
+
+.navigation {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    margin-right: 2rem;
+}
+
+.tabs {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.tabs:hover {
+    text-decoration: underline;
 }
 
 #titles {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-self: center;
 }
 
 h1 {
     margin: 0;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
     font-size: 5rem;
     color: white;
     background-color: rgba(112, 128, 144, 0.5);
@@ -56,8 +70,6 @@ h1 {
 h2 {
     width: 100%;
     margin: 0;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
     text-align: center;
     font-size: 1.2rem;
     border-top: 0.5rem solid black;
@@ -65,6 +77,115 @@ h2 {
     background-image: radial-gradient(rgb(41, 48, 88, 0.75), rgb(112, 128, 144, 0.75));
     /*border: 2px dashed orange;*/
     
+}
+
+#arrow {
+    width: 3rem;
+    height: 3rem;
+    border: 0.5rem solid white;
+    border-left: 0;
+    border-top: 0;
+    align-self: center;
+    transform: rotate(45deg);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7rem;
+}
+
+.bar {
+    width: 0.5rem;
+    height: 2.5rem;
+    background-color: white;
+    border-radius: 10px;
+    transform: rotate(135deg);
+    
+}
+
+main {
+    padding: 5%;
+}
+
+blockquote {
+    background-color: rgb(41, 48, 88);
+    color: white;
+    font-style: italic;
+    font-size: 3rem;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: -50px -30px slategrey, -100px -50px rgb(41, 48, 88);
+}
+
+section {
+    background-color: rgb(192, 197, 226);
+    padding: 2rem;
+    border-radius: 5px;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+h3 {
+    font-size: 2rem;
+    text-align: center;
+    background-image: radial-gradient(rgb(41, 48, 88), rgb(112, 128, 144));
+    color:white;
+    width: 20%;
+    padding: 0 1rem;
+    border-radius: 5px;
+    box-shadow: 7px 7px rgb(41, 48, 88);
+}
+
+p, .content, .lists {
+    font-size: 1.2rem;
+    margin: 0.75rem 3rem;
+}
+
+.lists {
+    display: flex;
+    width: -moz-fit-content;
+    width: fit-content;
+    justify-self: center;
+}
+
+.list1, .list2 {
+    flex: 1;
+}
+
+.list1 {
+    background-color: rgb(79, 89, 141);
+    color: white;
+}
+
+.list2 {
+    background-color: rgb(134, 142, 185);
+}
+
+.banner {
+    background-color: rgb(41, 48, 88);
+    color: white;
+    align-self: center;
+    padding: 0.3rem;
+    border-radius: 5px;
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    box-shadow: inset 10px 10px 10px 5px rgb(192, 197, 226), inset -10px -10px 10px 5px rgb(192, 197, 226);
+}
+
+.pics {
+    align-self: center;
+    display: flex;
+    gap: 3rem;
+}
+
+img {
+    height: 25vmax;
+    width: auto;
+    box-shadow: 5px 5px 10px rgb(41, 48, 88);
+    border-radius: 5px;
 }
 
 footer {
