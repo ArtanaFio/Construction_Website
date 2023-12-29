@@ -1,39 +1,51 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
     font-size: 25px;
 }
 
-html, body {
-    margin: 0;
-}
-
-body {
-    background-color:rgb(210, 228, 247);
+body, header, main, .list1, .list2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+body {
+    width: 100vw;
+    background-color:rgb(210, 228, 247);
     justify-content: space-between;
 }
 
-header {
+header, footer, main, h1, h2, nav {
+    width: 100vw;
+}
+
+header, footer {
     background-color: rgb(54, 97, 139);
+}
+
+header, .tabs, blockquote, h3, .list1, .banner, footer {
+    color: white;
+}
+
+header {
     background-image: url(../../images/rodolfo-quirós.jpg);
     background-size: cover;
-    width: 100%;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    gap: 2.5vmax;
 }
 
 nav {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 0.5rem 2rem;
+    padding: 0 5vmin;
+    margin: 0.5rem;
 }
 
 nav > img {
@@ -45,19 +57,57 @@ nav > img {
 .navigation {
     list-style-type: none;
     display: flex;
-    justify-content: flex-end;
-    gap: 2rem;
-    margin-right: 2rem;
+    width: 25%;
+    justify-content: space-between;
+}
+
+.navigaton > li {
+    margin: 0 1rem;
+    overflow: hidden;
 }
 
 .tabs {
-    color: white;
     text-decoration: none;
     font-size: 1.5rem;
 }
 
 .tabs:hover {
     text-decoration: underline;
+}
+
+.hamburger-box {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: block;
+    background-color: white;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    border-radius: 2px;
+}
+
+.menu-button::before {
+    content: '';
+    margin-top: -8px;
+}
+
+.menu-button::after {
+    content: '';
+    margin-top: 8px;
 }
 
 #titles {
@@ -67,23 +117,16 @@ nav > img {
 }
 
 h1 {
-    margin: 0;
-    font-size: 5rem;
-    color: white;
+    font-size: 7vmax;
     background-color: rgba(59, 124, 189, 0.5);
-    box-shadow: 5px 5px 10px rgba(59, 124, 189, 0.5), -5px -5px 10px rgba(59, 124, 189, 0.5);
+    /*box-shadow: 5px 5px 10px rgba(59, 124, 189, 0.5), -5px -5px 10px rgba(59, 124, 189, 0.5);*/
 }
 
 h2 {
-    width: 100%;
-    margin: 0;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 2.5vmax;
     border-top: 0.5rem solid black;
-    color: white;
     background-image: radial-gradient(rgb(2, 41, 80), rgba(54, 97, 139, 0.75));
-    /*border: 2px dashed orange;*/
-    
 }
 
 #arrow {
@@ -118,49 +161,60 @@ h2 {
 }
 
 main {
-    padding: 5%;
+    gap: 2vmax;
+    padding: 2vmax 0;
+}
+
+blockquote, section {
+    width: 90%;
 }
 
 blockquote {
     background-color: rgb(2, 41, 80);
-    color: white;
     font-style: italic;
-    font-size: 3rem;
+    font-size: 3vmax;
     text-align: center;
-    padding: 1rem;
-    box-shadow: -50px -30px rgb(59, 124, 189), -100px -50px rgb(138, 193, 248);
+    padding: 1vmax;
+}
+
+section, img, h3, .banner {
+    border-radius: 5px;
 }
 
 section {
     background-color: rgb(138, 193, 248);
-    padding: 2rem;
-    border-radius: 5px;
-    margin: 2rem 0;
-    display: flex;
-    flex-direction: column;
+    padding: 2vmax;
 }
 
 h3 {
     font-size: 2rem;
     text-align: center;
     background-image: radial-gradient(rgb(2, 41, 80), rgba(54, 97, 139, 0.75));
-    color:white;
-    width: 20%;
+    width: -moz-fit-content;
+    width: fit-content;
     padding: 0 1rem;
-    border-radius: 5px;
     box-shadow: 7px 7px rgb(2, 41, 80);
 }
 
-p, .content, .lists {
+p, .content {
     font-size: 1.2rem;
-    margin: 0.75rem 3rem;
+}
+
+p, .pics {
+    margin: 5vmin;
+}
+
+.content {
+    padding-bottom: 5vmin;
+}
+
+.content > li {
+    margin: 2vmin 10vmin;
 }
 
 .lists {
     display: flex;
-    width: -moz-fit-content;
-    width: fit-content;
-    justify-self: center;
+    flex-wrap: wrap;
 }
 
 .list1, .list2 {
@@ -169,7 +223,6 @@ p, .content, .lists {
 
 .list1 {
     background-color: rgb(2, 41, 80);
-    color: white;
 }
 
 .list2 {
@@ -178,36 +231,99 @@ p, .content, .lists {
 
 .banner {
     background-color: rgb(2, 41, 80);
-    color: white;
-    align-self: center;
     padding: 0.3rem;
-    border-radius: 5px;
-    margin: 0.5rem;
     font-size: 1.5rem;
     width: -moz-fit-content;
     width: fit-content;
-    box-shadow: inset 10px 10px 10px 5px rgb(138, 193, 248), inset -10px -10px 10px 5px rgb(138, 193, 248);
+    margin: 0 auto;
+    text-align: center;
 }
 
 .pics {
     align-self: center;
     display: flex;
-    gap: 3rem;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 img {
     height: 25vmax;
     width: auto;
     box-shadow: 5px 5px 10px rgb(41, 48, 88);
-    border-radius: 5px;
 }
 
 footer {
     font-size: 0.75rem;
     background-color: slategrey;
-    color: white;
-    width: 100%;
     text-align: center;
-    padding: 2rem;
+    padding: 2vmax;
     background-image: radial-gradient(rgb(2, 41, 80), rgba(54, 97, 139, 0.75));
+}
+
+
+@media (max-width: 700px) {
+    header {
+        gap: 14vmax;
+    }
+    h1 {
+        text-align: center;
+        font-size: 5.3vmax;
+    }
+    .hamburger-box {
+        display: flex;
+    }
+    .navigation {
+        position: absolute;
+        top: 0;
+        margin-top: 5rem;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    #menu-toggle ~ .navigation li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.320, 1);
+    }
+    #menu-toggle ~ .navigation li a{
+        color: transparent;
+    }
+    #menu-toggle:checked ~ .navigation li a{
+        color: white;
+    }
+    #menu-toggle:checked ~ .navigation li {
+        border: 1px solid rgb(41, 48, 88);
+        height: 2.5rem;
+        padding: 0.5rem;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.320, 1);
+    }
+    .navigation > li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5rem 0;
+        width: 100%;
+        background-color: rgb(59, 124, 189);
+    }
+    .list1, .list2 {
+        text-align: center;
+    }
+    .content > li {
+        list-style-type: none;
+        margin: 5vmin 1.5vmin;
+    }
+    .email {
+        font-size: 5vmin;
+    }
+    .pics {
+        gap: 5vmin;
+    }
+    img {
+        width: 25vmax;
+        height: auto;
+    }
 }
