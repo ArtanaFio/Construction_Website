@@ -119,7 +119,6 @@ nav > img {
 h1 {
     font-size: 7vmax;
     background-color: rgba(59, 124, 189, 0.5);
-    /*box-shadow: 5px 5px 10px rgba(59, 124, 189, 0.5), -5px -5px 10px rgba(59, 124, 189, 0.5);*/
 }
 
 h2 {
@@ -282,6 +281,9 @@ footer {
         text-align: center;
         font-size: 5.3vmax;
     }
+    h3 {
+        font-size: 10vmin;
+    }
     .hamburger-box {
         display: flex;
     }
@@ -322,6 +324,20 @@ footer {
         width: 100%;
         background-color: rgb(59, 124, 189);
     }
+    section {
+        padding: 1vmax;
+    }
+    p {
+        font-size: 7vmin;
+        margin: 5vmin 2vmin;
+        text-align: center;
+    }
+    .pics {
+        margin: 2vmin;
+    }
+    .list-subject {
+        font-size: 1rem;
+    }
     .list1, .list2 {
         text-align: center;
     }
@@ -336,7 +352,7 @@ footer {
         gap: 5vmin;
     }
     img {
-        width: 25vmax;
+        width: 35vmax;
         height: auto;
     }
     blockquote {
