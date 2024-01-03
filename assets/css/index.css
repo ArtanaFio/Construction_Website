@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat&family=Poppins:ital,wght@0,400;1,500&display=swap');
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,6 +9,8 @@
 
 html {
     font-size: 25px;
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body, header, main, .list1, .list2 {
@@ -37,6 +42,7 @@ header {
     background-size: cover;
     height: 100vh;
     gap: 2.5vmax;
+    opacity: 0;
 }
 
 nav {
@@ -46,6 +52,7 @@ nav {
     align-items: center;
     padding: 0 5vmin;
     margin: 0.5rem;
+    opacity: 0;
 }
 
 nav > img {
@@ -114,16 +121,19 @@ nav > img {
     display: flex;
     flex-direction: column;
     justify-self: center;
+    opacity: 0;
 }
 
 h1 {
     font-size: 7vmax;
     background-color: rgba(59, 124, 189, 0.5);
+    font-family: 'Anton';
+    letter-spacing: 0.75rem;
 }
 
 h2 {
     text-align: center;
-    font-size: 2.5vmax;
+    font-size: 2vmax;
     border-top: 0.5rem solid black;
     background-image: radial-gradient(rgb(2, 41, 80), rgba(54, 97, 139, 0.75));
 }
@@ -141,11 +151,12 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 7rem;
+    margin-top: 5rem;
     transition-property: background-color, box-shadow;
     transition-duration: 200ms;
     background-color: transparent;
     box-shadow: none;
+    opacity: 0;
 }
 
 #arrow:hover {
@@ -187,6 +198,7 @@ blockquote {
     margin-top: 4vmax;
     margin-left: 2.5vmax;
     width: 86%;
+    font-family: 'Poppins';
 }
 
 section, img, h3, .banner {
@@ -206,6 +218,7 @@ h3 {
     width: fit-content;
     padding: 0 1rem;
     box-shadow: 7px 7px rgb(2, 41, 80);
+    font-family: 'Poppins';
 }
 
 p, .content {
@@ -214,6 +227,10 @@ p, .content {
 
 p, .pics {
     margin: 5vmin;
+}
+
+.list-subject {
+    font-size: 1.3rem;
 }
 
 .content {
@@ -279,7 +296,11 @@ footer {
     }
     h1 {
         text-align: center;
-        font-size: 5.3vmax;
+        font-size: 4.5vmax;
+        letter-spacing: 0.25rem;
+    }
+    h2 {
+        line-height: 1rem;;
     }
     h3 {
         font-size: 10vmin;
@@ -335,9 +356,6 @@ footer {
     .pics {
         margin: 2vmin;
     }
-    .list-subject {
-        font-size: 1rem;
-    }
     .list1, .list2 {
         text-align: center;
     }
@@ -346,7 +364,7 @@ footer {
         margin: 5vmin 1.5vmin;
     }
     .email {
-        font-size: 5vmin;
+        font-size: 4.5vmin;
     }
     .pics {
         gap: 5vmin;
