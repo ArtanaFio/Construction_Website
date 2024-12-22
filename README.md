@@ -23,4 +23,4 @@ CREDITS:
 --- Inspiration from the Level 10 Construction website: https://www.level10gc.com/
 
 WEBSITE ADDRESS:
-https://mncpartnersconstructionllc.com
+http://mncpartnersconstructionllc.com
