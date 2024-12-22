@@ -38,7 +38,7 @@ header, .tabs, blockquote, h3, .list1, .banner, footer {
 }
 
 header {
-    background-image: url(../../images/rodolfo-quirós.jpg);
+    background-image: url(../images/rodolfo-quirós.jpg);
     background-size: cover;
     height: 100vh;
     gap: 2.5vmax;
