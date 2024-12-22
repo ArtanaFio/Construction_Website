@@ -269,6 +269,13 @@ p, .pics {
 }
 
 .pics {
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+}
+
+.row {
+    width: 100%; 
     align-self: center;
     display: flex;
     justify-content: space-evenly;
