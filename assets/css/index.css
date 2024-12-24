@@ -20,7 +20,6 @@ body, header, main, .list1, .list2 {
 }
 
 body {
-    width: 100vw;
     background-color:rgb(210, 228, 247);
     justify-content: space-between;
 }
@@ -55,7 +54,17 @@ nav {
     opacity: 0;
 }
 
-nav > img {
+.nav-pages {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vmin;
+    margin: 0.5rem;
+}
+
+nav > img, .logo> img {
     width: 5rem;
     height: auto;
     box-shadow: none;
@@ -78,8 +87,19 @@ nav > img {
     font-size: 1.5rem;
 }
 
-.tabs:hover {
+.tabs-pages {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(2, 41, 80);
+}
+
+.tabs:hover, .tabs-pages:hover {
     text-decoration: underline;
+}
+
+.logo:hover {
+    cursor:pointer;
 }
 
 .hamburger-box {
@@ -201,7 +221,7 @@ blockquote {
     font-family: 'Poppins';
 }
 
-section, img, h3, .banner {
+section, img, h3, .banner, button {
     border-radius: 5px;
 }
 
@@ -268,6 +288,28 @@ p, .pics {
     text-align: center;
 }
 
+.button {
+    display: block;
+    color: white;
+    background-color: rgb(59, 124, 189);
+    background-image: radial-gradient(rgb(96, 176, 255), rgb(0, 77, 155));
+    padding: 0.5em;
+    font-size: 2rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 3rem auto;
+    text-align: center;
+    border: none;
+    text-decoration: none;
+}
+
+.button:hover {
+    color: rgb(2, 41, 80);
+    background-image: radial-gradient(white, rgb(62, 158, 255));
+    box-shadow: 0.75vmin 0.75vmin 5px rgb(0, 77, 155);
+    font-weight: bold;
+}
+
 .pics {
     display: flex;
     flex-direction: column;
@@ -275,15 +317,27 @@ p, .pics {
 }
 
 .row {
-    width: 100%; 
+    width: 100vw;
     align-self: center;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
+.front-images {
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.front-images > img {
+    height: 30vmax;
+}
+
 img {
-    height: 25vmax;
+    height: 40vmax;
     width: auto;
     box-shadow: 5px 5px 10px rgb(41, 48, 88);
 }
