@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat&family=Poppins:ital,wght@0,400;1,500&display=swap');
 
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -25,7 +24,7 @@ body {
 }
 
 header, footer, main, h1, h2, nav {
-    width: 100vw;
+    width: 100%;
 }
 
 header, footer {
@@ -50,21 +49,10 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0 5vmin;
-    margin: 0.5rem;
     opacity: 0;
 }
 
-.nav-pages {
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5vmin;
-    margin: 0.5rem;
-}
-
-nav > img, .logo> img {
+nav > img {
     width: 5rem;
     height: auto;
     box-shadow: none;
@@ -73,12 +61,11 @@ nav > img, .logo> img {
 .navigation {
     list-style-type: none;
     display: flex;
-    width: 25%;
     justify-content: space-between;
+    gap: 1rem;
 }
 
 .navigaton > li {
-    margin: 0 1rem;
     overflow: hidden;
 }
 
@@ -87,19 +74,8 @@ nav > img, .logo> img {
     font-size: 1.5rem;
 }
 
-.tabs-pages {
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: rgb(2, 41, 80);
-}
-
-.tabs:hover, .tabs-pages:hover {
+.tabs:hover {
     text-decoration: underline;
-}
-
-.logo:hover {
-    cursor:pointer;
 }
 
 .hamburger-box {
@@ -149,6 +125,8 @@ h1 {
     background-color: rgba(59, 124, 189, 0.5);
     font-family: 'Anton';
     letter-spacing: 0.75rem;
+    /* Update 12/24/2024: */
+    font-weight: normal;
 }
 
 h2 {
@@ -161,8 +139,8 @@ h2 {
 #arrow {
     width: 3rem;
     height: 3rem;
-    border-right: 0.5rem solid white;
-    border-bottom: 0.5rem solid white;
+    border-right: 0.75rem solid white;
+    border-bottom: 0.75rem solid white;
     border-left: 0;
     border-top: 0;
     align-self: center;
@@ -185,27 +163,22 @@ h2 {
 }
 
 .bar {
-    width: 0.5rem;
-    height: 2.5rem;
+    width: 0.75rem;
+    height: 4rem;
     background-color: white;
     border-radius: 10px;
     transform: rotate(135deg);
-    
 }
 
 .skyblue-shaft {
     background-color: rgb(138, 193, 248);
-    width: 0.6rem;
-    height: 3.5rem;
+    width: 0.75rem;
+    height: 4rem;
 }
 
 main {
     gap: 2vmax;
     padding: 2vmax 0;
-}
-
-section {
-    width: 90%;
 }
 
 blockquote {
@@ -226,8 +199,12 @@ section, img, h3, .banner, button {
 }
 
 section {
+    width: 90%;
     background-color: rgb(138, 193, 248);
     padding: 2vmax;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h3 {
@@ -239,13 +216,18 @@ h3 {
     padding: 0 1rem;
     box-shadow: 7px 7px rgb(2, 41, 80);
     font-family: 'Poppins';
+    align-self: flex-start;
+}
+
+.please-sentence {
+    align-self: flex-start;
 }
 
 p, .content {
     font-size: 1.2rem;
 }
 
-p, .pics {
+p {
     margin: 5vmin;
 }
 
@@ -310,20 +292,6 @@ p, .pics {
     font-weight: bold;
 }
 
-.pics {
-    display: flex;
-    flex-direction: column;
-    gap: 3vw;
-}
-
-.row {
-    width: 100vw;
-    align-self: center;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
 .front-images {
     margin-top: 3rem;
     width: 100%;
@@ -353,18 +321,20 @@ footer {
 
 @media (max-width: 700px) {
     header {
-        gap: 14vmax;
+        gap: 7vmax;
     }
     h1 {
         text-align: center;
-        font-size: 4.5vmax;
-        letter-spacing: 0.25rem;
+        font-size: 5.75vmax;
+        letter-spacing: 0.1rem;
     }
     h2 {
-        line-height: 1rem;;
+        line-height: 1rem;
+        font-size: 3vmax;
     }
     h3 {
-        font-size: 10vmin;
+        font-size: 7vmin;
+        margin-left: 1vmax;
     }
     .hamburger-box {
         display: flex;
@@ -378,6 +348,7 @@ footer {
         width: 100%;
         justify-content: center;
         align-items: center;
+        gap: 0;
     }
     #menu-toggle ~ .navigation li {
         height: 0;
@@ -394,9 +365,11 @@ footer {
     }
     #menu-toggle:checked ~ .navigation li {
         border: 1px solid rgb(41, 48, 88);
-        height: 4rem;
-        padding: 1rem;
+        height: 3rem;
         transition: height 400ms cubic-bezier(0.23, 1, 0.320, 1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .navigation > li {
         display: flex;
@@ -407,15 +380,21 @@ footer {
         background-color: rgb(59, 124, 189);
     }
     section {
-        padding: 1vmax;
+        padding: 1vmax 0;
     }
     p {
-        font-size: 7vmin;
+        font-size: 5vmin;
         margin: 5vmin 2vmin;
         text-align: center;
     }
-    .pics {
-        margin: 2vmin;
+    .lists {
+        flex-direction: column;
+    }
+    .list-subject {
+        font-size: 1rem;
+    }
+    .content {
+        font-size: 5vmin;
     }
     .list1, .list2 {
         text-align: center;
@@ -427,12 +406,20 @@ footer {
     .email {
         font-size: 4.5vmin;
     }
-    .pics {
-        gap: 5vmin;
+    .front-images{
+        width: 80%;
+        gap: 10px;
+    }
+    .front-images > img {
+        height: auto;
+        width: 100%;
     }
     img {
-        width: 35vmax;
+        width: 95%;
         height: auto;
+    }
+    .button {
+        font-size: 1.25rem;
     }
     blockquote {
         box-shadow: none;
