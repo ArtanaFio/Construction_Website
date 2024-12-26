@@ -19,3 +19,24 @@ function showBackToTopButton() {
 }
 
 window.addEventListener('scroll', showBackToTopButton);
+
+
+//lazy loading & fade-in effect
+document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('.photo');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.classList.add('visible');
+                observer.unobserve(img);
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    images.forEach(img => observer.observe(img));
+});

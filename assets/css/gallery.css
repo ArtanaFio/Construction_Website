@@ -41,6 +41,7 @@ body{
     align-items: center;
     text-align: center;
     transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
 }
 
 #return.show {
@@ -201,6 +202,17 @@ img {
     box-shadow: 5px 5px 10px rgb(41, 48, 88);
 }
 
+.photo {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.photo.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 footer {
     font-size: 0.75rem;
     background-color: slategrey;
@@ -265,6 +277,7 @@ footer {
         padding: 0.5rem 0;
         width: 100%;
         background-color: rgb(59, 124, 189);
+        z-index: 1000;
     }
     p {
         font-size: 5vmin;
