@@ -429,3 +429,13 @@ footer {
         margin-bottom: 2vmax;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    .menu-button,
+    .menu-button::before,
+    .menu-button::after,
+    #arrow,
+    .bar {
+        background-color: white;
+    }
+}
