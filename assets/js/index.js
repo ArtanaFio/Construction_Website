@@ -24,6 +24,13 @@ function highlightArrow() {
 };
 highlightArrow();
 
+function linkArrow() {
+    document.getElementById("arrow").addEventListener('click', () => {
+        location.href = '#quote';
+    });
+};
+linkArrow();
+
 /* Fade in upon loading the web page */
 
 const header = document.querySelector("header");
@@ -64,3 +71,37 @@ let fadeInHeader = setInterval(() => {
     header.style.opacity = headerOpacity;
     headerOpacity += 0.01;
 }, 5);
+
+function linkFacebook() {
+    document.getElementById("facebook").addEventListener('click', () => {
+        location.href = 'https://www.facebook.com/profile.php?id=100063113447291&mibextid=ZbWKwL';
+    });
+};
+linkFacebook();
+
+function clickMenuButton() {
+    const menuButton = document.getElementById("menu-toggle");
+    const links = document.querySelectorAll(".nav-opt");
+    const linkText = document.querySelectorAll(".tabs");
+    
+    links.forEach(link => {
+        link.classList.add("off-menu");
+    });
+
+    linkText.forEach(text => {
+        text.classList.add("off-menu-link");
+    });
+
+    menuButton.addEventListener("click", () => {
+        links.forEach(link => {
+            link.classList.toggle("on-menu");
+            link.classList.toggle("off-menu");
+        });
+
+        linkText.forEach(text => {
+            text.classList.toggle("on-menu-link");
+            text.classList.toggle("off-menu-link");
+        });
+    });
+};
+clickMenuButton();
