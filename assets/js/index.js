@@ -35,7 +35,7 @@ linkArrow();
 function fadeIntoView() {
     const header = document.querySelector("header");
     const arrow = document.getElementById("arrow");
-    const navigationBar = document.querySelector("nav");
+    const navigationBar = document.getElementById("index-nav");
     const titles = document.getElementById("titles");
 
     let headerOpacity = 0;
@@ -80,30 +80,3 @@ function linkFacebook() {
     });
 };
 linkFacebook();
-
-function clickMenuButton() {
-    const menuButton = document.getElementById("menu-toggle");
-    const links = document.querySelectorAll(".nav-opt");
-    const linkText = document.querySelectorAll(".tabs");
-    
-    links.forEach(link => {
-        link.classList.add("off-menu");
-    });
-
-    linkText.forEach(text => {
-        text.classList.add("off-menu-link");
-    });
-
-    menuButton.addEventListener("click", () => {
-        links.forEach(link => {
-            link.classList.toggle("on-menu");
-            link.classList.toggle("off-menu");
-        });
-
-        linkText.forEach(text => {
-            text.classList.toggle("on-menu-link");
-            text.classList.toggle("off-menu-link");
-        });
-    });
-};
-clickMenuButton();

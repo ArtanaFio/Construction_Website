@@ -1,6 +1,6 @@
-const backToTopButton = document.getElementById("return");
-
 function showBackToTopButton() {
+    const backToTopButton = document.getElementById("return");
+
     if (window.scrollY > 200) {
         if (!backToTopButton.classList.contains('show')) {
             backToTopButton.style.display = 'flex';
@@ -16,7 +16,7 @@ function showBackToTopButton() {
             }, 300);
         }
     }
-}
+};
 
 window.addEventListener('scroll', showBackToTopButton);
 

@@ -6,23 +6,26 @@
     <title>Gallery</title>
     <link rel="icon" type="image" href="../assets/images/M&C_white_logo.jpg">
     <link rel="stylesheet" href="../assets/css/gallery.css">
+    <link rel="stylesheet" href="../assets/css/menu.css">
     <script src="../assets/js/gallery.js" defer></script>
+    <script src="../assets/js/menu.js" defer></script>
 </head>
 <body>
     <a id="return" class="hide-return" href="#top">Back to top</a>
-    <div class="nav-pages" id="top">
+    <nav id="gallery-nav">
         <a class="logo" href="../index.html"><img alt="M&C Logo" src="../assets/images/M&C_white_logo.jpg"></a>
-        <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="hamburger-box">
-                <div class="menu-button blue"></div>
-            </label>
-            <ul class="navigation">
-                <li><a class="tabs-pages" href="../index.html">Home</a></li>
-                <li><a class="tabs-pages" href="../index.html#intro">Intro</a></li>
-                <li><a class="tabs-pages" href="../index.html#work">Work</a></li>
-                <li><a class="tabs-pages" href="../index.html#contact">Contact</a></li>
-            </ul>
-    </div>
+        <button id="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Toggle navigation" class="hamburger-box">
+            <div class="patty blue"></div>
+            <div class="patty blue"></div>
+            <div class="patty blue"></div>
+        </button>
+        <ul class="navigation">
+            <li class="nav-opt"><a class="tabs" href="../index.html">Home</a></li>
+            <li class="nav-opt"><a class="tabs" href="../index.html#intro">Intro</a></li>
+            <li class="nav-opt"><a class="tabs" href="../index.html#work">Work</a></li>
+            <li class="nav-opt"><a class="tabs" href="../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
     <div class="banner">
         <p><strong>Photo Gallery</strong></p>
     </div>
