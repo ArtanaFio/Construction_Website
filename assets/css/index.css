@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat&family=Poppins:ital,wght@0,400;1,500&display=swap');
 
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -20,13 +19,12 @@ body, header, main, .list1, .list2 {
 }
 
 body {
-    width: 100vw;
     background-color:rgb(210, 228, 247);
     justify-content: space-between;
 }
 
-header, footer, main, h1, h2, nav {
-    width: 100vw;
+header, footer, h1, h2, nav {
+    width: 100%;
 }
 
 header, footer {
@@ -38,7 +36,7 @@ header, .tabs, blockquote, h3, .list1, .banner, footer {
 }
 
 header {
-    background-image: url(../../images/rodolfo-quirós.jpg);
+    background-image: url(../images/rodolfo-quirós.jpg);
     background-size: cover;
     height: 100vh;
     gap: 2.5vmax;
@@ -64,8 +62,10 @@ nav > img {
 .navigation {
     list-style-type: none;
     display: flex;
-    width: 25%;
+    gap: 20px;
     justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.500);
+    border-radius: 10px;
 }
 
 .navigaton > li {
@@ -170,7 +170,6 @@ h2 {
     background-color: white;
     border-radius: 10px;
     transform: rotate(135deg);
-    
 }
 
 .skyblue-shaft {
@@ -189,16 +188,16 @@ section {
 }
 
 blockquote {
-    background-color: rgb(2, 41, 80);
+    font-family: 'Poppins';
     font-style: italic;
     font-size: 3.5vmax;
     text-align: center;
-    padding: 1vmax;
-    box-shadow: -2vmax -1vmax rgb(59, 124, 189), -4vmax -2vmax rgb(138, 193, 248);
+    width: 86%;
     margin-top: 4vmax;
     margin-left: 2.5vmax;
-    width: 86%;
-    font-family: 'Poppins';
+    padding: 1vmax 0;
+    background-color: rgb(2, 41, 80);
+    box-shadow: -2vmax -1vmax rgb(59, 124, 189), -4vmax -2vmax rgb(138, 193, 248);
 }
 
 section, img, h3, .banner {
@@ -324,6 +323,7 @@ footer {
         width: 100%;
         justify-content: center;
         align-items: center;
+        background-color: transparent;
     }
     #menu-toggle ~ .navigation li {
         height: 0;
