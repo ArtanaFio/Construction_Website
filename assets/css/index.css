@@ -339,9 +339,7 @@ footer {
 }
 
 @media (prefers-color-scheme: dark) {
-    .patty,
-    #arrow,
-    .bar {
+    .patty {
         background-color: white;
     }
 }
