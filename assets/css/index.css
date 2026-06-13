@@ -170,7 +170,7 @@ h3 {
     align-self: flex-start;
 }
 
-p, .content, #contact ul {
+p, .content {
     font-size: 1.2rem;
 }
 
@@ -311,14 +311,8 @@ footer {
         list-style-type: none;
         margin: 5vmin 1.5vmin;
     }
-    .email, #contact ul {
+    .email {
         font-size: 4.25vmin;
-    }
-    #contact ul {
-        margin: 5vmin 2vmin;
-    }
-    #contact li {
-        margin-left: 5vmin;
     }
     .front-images{
         width: 80%;
